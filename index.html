@@ -167,6 +167,29 @@
         /* Mobile: phone mockup sizing */
         @media (max-width: 767px) {
             .phone-mockup::before { height: 14px; width: 30%; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; }
+            /* Fix centering: account for fixed nav bar at bottom */
+            .slide { padding-top: 8px; padding-bottom: 70px; box-sizing: border-box; }
+            /* Center text on mobile */
+            .slide-content { text-align: center; }
+            .slide-content ul { text-align: center; }
+            .slide-content li { display: block !important; text-align: center; }
+            .slide-content li i, .slide-content li > .fas, .slide-content li > .fab { margin-right: 4px; }
+            .slide-content .flex.gap-2,
+            .slide-content .flex.gap-3 { justify-content: center; }
+            .slide-content .mt-4.flex,
+            .slide-content .mt-8.flex { justify-content: center; }
+            /* Compact text */
+            .slide-content h1 { font-size: 1.4rem; }
+            .slide-content h2 { font-size: 1.15rem; }
+            .slide-content p { font-size: 0.72rem; }
+            .slide-content ul, .slide-content li { font-size: 0.72rem; line-height: 1.35; }
+            .slide-content li { gap: 0.4rem; }
+            .slide-content li i, .slide-content li .fas, .slide-content li .fab { font-size: 0.65rem; min-width: 14px; text-align: center; flex-shrink: 0; }
+            .slide-content .feature-card { font-size: 0.72rem; padding: 6px 8px; }
+            .slide-content .step-badge { margin-bottom: 4px; padding: 2px 10px; font-size: 0.6rem; }
+            .slide-content .section-badge { margin-bottom: 4px; }
+            /* Phone images */
+            .phone-mockup { width: 10rem !important; height: 300px !important; margin-top: 12px; }
         }
 
         /* Scrollbar */
@@ -184,12 +207,12 @@
     </div>
 
     <!-- Slides Container -->
-    <div id="slider" class="flex-1 relative w-full h-full p-4 pt-6 pb-20 md:p-12 md:pb-20 lg:p-16 lg:pb-20">
+    <div id="slider" class="flex-1 relative w-full h-full px-3 py-0 md:p-12 md:pb-20 lg:p-16 lg:pb-20">
 
         <!-- ==================== SLIDE 1: Title ==================== -->
         <div class="slide active" id="slide-0">
             <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center">
-                <div>
+                <div class="slide-content">
                     <div class="section-badge fade-up">LOYIHA TAQDIMOTI</div>
                     <h1 class="text-3xl md:text-7xl font-extrabold mb-2 md:mb-4 fade-up">Stadion<span class="brand-green">24</span>.uz</h1>
                     <p class="text-sm md:text-2xl text-gray-400 mb-4 md:mb-8 fade-up">Stadionlarni toping, band qiling, o'ynang!</p>
@@ -220,7 +243,7 @@
                         <img src="imges/photo_2_2026-03-12_14-27-50.jpg" alt="Til tanlash" class="w-full h-full object-cover rounded-[26px]">
                     </div>
                 </div>
-                <div class="order-1 md:order-2">
+                <div class="slide-content order-1 md:order-2">
                     <div class="step-badge">1-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Tilni <span class="brand-green">Tanlang</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Ilova ochilganda foydalanuvchi o'ziga qulay tilni tanlaydi.</p>
@@ -236,7 +259,7 @@
         <!-- ==================== SLIDE 3: Onboarding ==================== -->
         <div class="slide" id="slide-2">
             <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center">
-                <div>
+                <div class="slide-content">
                     <div class="step-badge">2-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Ilovaga <span class="brand-green">Xush Kelibsiz</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Onboarding sahifalari orqali ilova imkoniyatlari tushuntiriladi.</p>
@@ -262,7 +285,7 @@
                         <img src="imges/photo_4_2026-03-12_14-27-50.jpg" alt="Kirish - Telefon raqam" class="w-full h-full object-cover rounded-[26px]">
                     </div>
                 </div>
-                <div class="order-1 md:order-2">
+                <div class="slide-content order-1 md:order-2">
                     <div class="step-badge">3-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Telefon Raqam <span class="brand-green">Kiriting</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Ro'yxatdan o'tish telefon raqam orqali amalga oshiriladi.</p>
@@ -278,7 +301,7 @@
         <!-- ==================== SLIDE 5: SMS tasdiqlash ==================== -->
         <div class="slide" id="slide-4">
             <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center">
-                <div>
+                <div class="slide-content">
                     <div class="step-badge">4-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Telegram orqali <span class="brand-green">Tasdiqlash</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">SMS o'rniga Telegram bot orqali tekin va xavfsiz tasdiqlash.</p>
@@ -308,7 +331,7 @@
                         <img src="imges/photo_6_2026-03-12_14-27-50.jpg" alt="Asosiy oyna" class="w-full h-full object-cover rounded-[26px]">
                     </div>
                 </div>
-                <div class="order-1 md:order-2">
+                <div class="slide-content order-1 md:order-2">
                     <div class="step-badge">5-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Asosiy <span class="brand-green">Oyna</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Kirgandan keyin asosiy sahifa ochiladi.</p>
@@ -325,7 +348,7 @@
         <!-- ==================== SLIDE 7: Turnirlar banneri ==================== -->
         <div class="slide" id="slide-6">
             <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center">
-                <div>
+                <div class="slide-content">
                     <div class="step-badge">6-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Turnirlar <span class="brand-green">Banneri</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Asosiy sahifada turnirlar slayderini ko'rish mumkin.</p>
@@ -351,7 +374,7 @@
                         <img src="imges/photo_10_2026-03-12_14-27-50.jpg" alt="Stadion tafsilotlari" class="w-full h-full object-cover rounded-[26px]">
                     </div>
                 </div>
-                <div class="order-1 md:order-2">
+                <div class="slide-content order-1 md:order-2">
                     <div class="step-badge">7-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Stadion <span class="brand-green">Tafsilotlari</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Har bir stadion haqida to'liq ma'lumot.</p>
@@ -384,7 +407,7 @@
         <!-- ==================== SLIDE 9: Sana tanlash ==================== -->
         <div class="slide" id="slide-8">
             <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center">
-                <div>
+                <div class="slide-content">
                     <div class="step-badge">8-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Sanani <span class="brand-green">Tanlang</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">"Band qilish" bosilgandan keyin sana va vaqt tanlash oynasi ochiladi.</p>
@@ -410,14 +433,14 @@
                         <img src="imges/photo_12_2026-03-12_14-27-50.jpg" alt="Vaqt tanlash va qo'shimcha xizmatlar" class="w-full h-full object-cover rounded-[26px]">
                     </div>
                 </div>
-                <div class="order-1 md:order-2">
+                <div class="slide-content order-1 md:order-2">
                     <div class="step-badge">9-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Vaqt va <span class="brand-green">Qo'shimcha Xizmatlar</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Soatni tanlab, qo'shimcha imkoniyatlardan foydalaning.</p>
                     <ul class="text-sm md:text-lg space-y-2 md:space-y-3 text-gray-300">
                         <li class="flex items-start gap-3"><i class="fas fa-check-circle brand-green mt-1"></i><span><strong>06:00</strong> tanlangan (yashil), <strong>07:00</strong> ham tanlangan</span></li>
                         <li class="flex items-start gap-3"><i class="fas fa-redo brand-green mt-1"></i><span><strong>"Har haftab shu vaqtda kelasizmi?"</strong> — Toggle yoqilgan. Tanlangan soat har hafta shu kunda band bo'ladi</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-video brand-green mt-1"></i><span><strong>"Video yozib olish"</strong> — <span class="brand-orange">500 000 so'm</span> qo'shimcha xizmat</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-video brand-green mt-1"></i><span><strong>"Video yozib olish"</strong> — <span class="brand-orange">50 000 so'm</span> qo'shimcha xizmat</span></li>
                         <li class="flex items-start gap-3"><i class="fas fa-times-circle brand-green mt-1"></i><span>Tanlangan vaqtni olib tashlash mumkin (06:00 x)</span></li>
                     </ul>
                 </div>
@@ -427,7 +450,7 @@
         <!-- ==================== SLIDE 11: Buyurtmani tasdiqlash ==================== -->
         <div class="slide" id="slide-10">
             <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center">
-                <div>
+                <div class="slide-content">
                     <div class="step-badge">10-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Buyurtmani <span class="brand-green">Tasdiqlash</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">"Band qilish" bosilganda tasdiqlash oynasi chiqadi.</p>
@@ -458,7 +481,7 @@
                         <img src="imges/photo_14_2026-03-12_14-27-50.jpg" alt="Buyurtma yaratildi" class="w-full h-full object-cover rounded-[26px]">
                     </div>
                 </div>
-                <div class="order-1 md:order-2">
+                <div class="slide-content order-1 md:order-2">
                     <div class="step-badge">11-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Buyurtma <span class="brand-green">Yaratildi!</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Tasdiqlangandan keyin buyurtma muvaffaqiyatli yaratiladi.</p>
@@ -467,7 +490,7 @@
                         <div class="flex justify-between mb-2"><span class="text-gray-400">Sana</span><span class="font-bold">Juma</span></div>
                         <div class="flex justify-between mb-2"><span class="text-gray-400">Soat</span><span class="font-bold">06:00 — 07:00</span></div>
                         <div class="flex justify-between mb-2"><span class="text-gray-400">Jami</span><span class="font-bold brand-green">200 000 so'm</span></div>
-                        <div class="flex justify-between mb-2"><span class="text-gray-400">Hozir to'laysiz</span><span class="font-bold brand-green">1 so'm</span></div>
+                        <div class="flex justify-between mb-2"><span class="text-gray-400">Hozir to'laysiz</span><span class="font-bold brand-green">20 000 so'm</span></div>
                         <div class="flex justify-between"><span class="text-gray-400">Holat</span><span class="font-bold brand-orange">Jarayonda</span></div>
                     </div>
                     <ul class="text-sm md:text-lg space-y-2 md:space-y-3 text-gray-300">
@@ -481,13 +504,13 @@
         <!-- ==================== SLIDE 13: Buyurtma taymer ==================== -->
         <div class="slide" id="slide-12">
             <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center">
-                <div>
+                <div class="slide-content">
                     <div class="step-badge">12-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Buyurtma va <span class="brand-orange">Taymer</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">"Buyurtma" tabida barcha buyurtmalar ko'rinadi.</p>
                     <ul class="text-sm md:text-lg space-y-2 md:space-y-3 text-gray-300">
                         <li class="flex items-start gap-3"><i class="fas fa-futbol brand-green mt-1"></i><span><strong>39-maktab stadioni</strong> — Juma, 06:00 — 07:00</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-money-bill brand-green mt-1"></i><span>200 000 so'm — Hozir to'laysiz: <strong class="brand-orange">1 so'm</strong></span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-money-bill brand-green mt-1"></i><span>200 000 so'm — Hozir to'laysiz: <strong class="brand-orange">20 000 so'm</strong></span></li>
                         <li class="flex items-start gap-3"><i class="fas fa-hourglass-half brand-orange mt-1"></i><span><strong>Taymer: 09:54</strong> — Vaqtinchalik ushlab turish uchun. Vaqt tugasa bron bekor bo'ladi</span></li>
                         <li class="flex items-start gap-3"><i class="fas fa-info-circle brand-green mt-1"></i><span>"Menejer siz bilan bog'lanadi va to'lovni kelishadi"</span></li>
                     </ul>
@@ -508,14 +531,14 @@
                         <img src="imges/photo_16_2026-03-12_14-27-50.jpg" alt="To'lov qilish" class="w-full h-full object-cover rounded-[26px]">
                     </div>
                 </div>
-                <div class="order-1 md:order-2">
+                <div class="slide-content order-1 md:order-2">
                     <div class="step-badge">13-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Online <span class="brand-green">To'lov</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Payme yoki Click orqali to'lovni avtomatik amalga oshiring.</p>
                     <div class="feature-card mb-3 md:mb-6">
                         <div class="flex justify-between mb-2"><span class="text-gray-400">Jami</span><span class="font-bold">200 000 so'm</span></div>
-                        <div class="flex justify-between mb-2"><span class="text-gray-400">O'yindan keyin to'laysiz</span><span class="font-bold">199 999 so'm</span></div>
-                        <div class="flex justify-between border-t border-gray-700 pt-2 mt-2"><span class="font-bold brand-green">Hozir to'laysiz</span><span class="font-bold brand-green text-2xl">1 so'm</span></div>
+                        <div class="flex justify-between mb-2"><span class="text-gray-400">O'yindan keyin to'laysiz</span><span class="font-bold">180 000 so'm</span></div>
+                        <div class="flex justify-between border-t border-gray-700 pt-2 mt-2"><span class="font-bold brand-green">Hozir to'laysiz</span><span class="font-bold brand-green text-2xl">20 000 so'm</span></div>
                     </div>
                     <div class="flex gap-2 md:gap-4 mb-3 md:mb-4">
                         <div class="feature-card flex-1 flex items-center gap-3">
@@ -525,7 +548,7 @@
                             <span class="text-lg font-bold text-purple-400">click</span>
                         </div>
                     </div>
-                    <p class="text-gray-500 text-sm"><i class="fas fa-info-circle mr-2"></i>Zaklad (oldindan to'lov) tizimi — faqat 1 so'm to'lab joyni band qiling!</p>
+                    <p class="text-gray-500 text-sm"><i class="fas fa-info-circle mr-2"></i>Zaklad (oldindan to'lov) tizimi — faqat 20 000 so'm to'lab joyni band qiling!</p>
                 </div>
             </div>
         </div>
@@ -533,14 +556,14 @@
         <!-- ==================== SLIDE 15: Turnir tafsiloti ==================== -->
         <div class="slide" id="slide-14">
             <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center">
-                <div>
+                <div class="slide-content">
                     <div class="step-badge">14-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Turnir <span class="brand-green">Tafsilotlari</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Navro'z Cup turniri haqida to'liq ma'lumot.</p>
                     <div class="feature-card mb-3 md:mb-6">
                         <div class="flex justify-between mb-2"><span class="text-gray-400">Sana</span><span class="font-bold">03 January 2026</span></div>
                         <div class="flex justify-between mb-2"><span class="text-gray-400">Vaqt</span><span class="font-bold">23:24 - 23:24</span></div>
-                        <div class="flex justify-between"><span class="text-gray-400">Qatnashish narxi</span><span class="font-bold brand-green">1 so'm</span></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Qatnashish narxi</span><span class="font-bold brand-green">50 000 so'm</span></div>
                     </div>
                     <ul class="text-sm md:text-lg space-y-2 md:space-y-3 text-gray-300">
                         <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt brand-green mt-1"></i><span><strong>Chilonzor 182-maktab</strong> — Qatortol 1-ko'chasi (Xaritada ko'rsatiladi)</span></li>
@@ -564,12 +587,12 @@
                         <img src="imges/photo_18_2026-03-12_14-27-50.jpg" alt="Turnir uchun to'lov" class="w-full h-full object-cover rounded-[26px]">
                     </div>
                 </div>
-                <div class="order-1 md:order-2">
+                <div class="slide-content order-1 md:order-2">
                     <div class="step-badge">15-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Turnir uchun <span class="brand-green">To'lov</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Ro'yxatdan o'tishni yakunlash uchun to'lovni amalga oshiring.</p>
                     <ul class="text-sm md:text-lg space-y-2 md:space-y-3 text-gray-300">
-                        <li class="flex items-start gap-3"><i class="fas fa-trophy brand-green mt-1"></i><span>Turnirda qatnashish narxi: <strong class="brand-green">1 so'm</strong></span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-trophy brand-green mt-1"></i><span>Turnirda qatnashish narxi: <strong class="brand-green">50 000 so'm</strong></span></li>
                         <li class="flex items-start gap-3"><i class="fas fa-credit-card brand-green mt-1"></i><span>Payme yoki Click orqali to'lov</span></li>
                         <li class="flex items-start gap-3"><i class="fas fa-arrow-right brand-green mt-1"></i><span>"To'lov qilish" tugmasi bilan yakunlash</span></li>
                     </ul>
@@ -580,7 +603,7 @@
         <!-- ==================== SLIDE 17: Turnir to'lov muvaffaqiyat ==================== -->
         <div class="slide" id="slide-16">
             <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center">
-                <div>
+                <div class="slide-content">
                     <div class="step-badge">16-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">To'lov <span class="brand-green">Tasdiqlandi!</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Turnir uchun to'lov muvaffaqiyatli amalga oshirildi.</p>
@@ -590,7 +613,7 @@
                         <div class="text-left space-y-2">
                             <div class="flex justify-between"><span class="text-gray-400"><i class="fas fa-trophy mr-2 brand-green"></i>Turnir</span><span class="font-bold brand-green">Navro'z Cup</span></div>
                             <div class="flex justify-between"><span class="text-gray-400"><i class="fas fa-futbol mr-2"></i>Stadion</span><span class="font-bold">Chilonzor 182-maktab</span></div>
-                            <div class="flex justify-between"><span class="text-gray-400"><i class="fas fa-money-bill mr-2"></i>Narx</span><span class="font-bold">1 so'm</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400"><i class="fas fa-money-bill mr-2"></i>Narx</span><span class="font-bold">50 000 so'm</span></div>
                         </div>
                     </div>
                     <p class="text-gray-500"><i class="fas fa-arrow-right mr-2"></i>"Davom etish" bilan ilovaga qaytish</p>
@@ -611,7 +634,7 @@
                         <img src="imges/photo_21_2026-03-12_14-27-50.jpg" alt="Klublar ro'yxati" class="w-full h-full object-cover rounded-[26px]">
                     </div>
                 </div>
-                <div class="order-1 md:order-2">
+                <div class="slide-content order-1 md:order-2">
                     <div class="step-badge">17-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Klublar <span class="brand-green">Ro'yxati</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Turnir ichida klublar va yakka o'yinchilarni ko'rish.</p>
@@ -628,7 +651,7 @@
         <!-- ==================== SLIDE 19: Klub yaratish ==================== -->
         <div class="slide" id="slide-18">
             <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center">
-                <div>
+                <div class="slide-content">
                     <div class="step-badge">18-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Klub <span class="brand-green">Yaratish</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">O'z jamoangiz uchun klub yarating.</p>
@@ -658,7 +681,7 @@
                         <img src="imges/photo_24_2026-03-12_14-27-50.jpg" alt="Klubga parol bilan qo'shilish" class="w-full h-full object-cover rounded-[26px]">
                     </div>
                 </div>
-                <div class="order-1 md:order-2">
+                <div class="slide-content order-1 md:order-2">
                     <div class="step-badge">19-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Klubga <span class="brand-green">Qo'shilish</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Mavjud klubga parol orqali qo'shiling.</p>
@@ -674,7 +697,7 @@
         <!-- ==================== SLIDE 21: Media ==================== -->
         <div class="slide" id="slide-20">
             <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center">
-                <div>
+                <div class="slide-content">
                     <div class="step-badge">20-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Media <span class="brand-green">Bo'limi</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">O'z o'yinlaringizni onlayn tomosha qiling va highlight lavhalarni ko'ring.</p>
@@ -701,7 +724,7 @@
                         <img src="imges/photo_7_2026-03-12_14-27-50.jpg" alt="Profil sahifasi" class="w-full h-full object-cover rounded-[26px]">
                     </div>
                 </div>
-                <div class="order-1 md:order-2">
+                <div class="slide-content order-1 md:order-2">
                     <div class="step-badge">21-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Shaxsiy <span class="brand-green">Profil</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Profil tabida shaxsiy ma'lumotlarni boshqarish.</p>
@@ -718,7 +741,7 @@
         <!-- ==================== SLIDE 23: Profil - Pastki qism ==================== -->
         <div class="slide" id="slide-22">
             <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center">
-                <div>
+                <div class="slide-content">
                     <div class="step-badge">22-QADAM</div>
                     <h2 class="text-xl md:text-5xl font-bold mb-2 md:mb-4">Sozlamalar va <span class="brand-green">Aloqa</span></h2>
                     <p class="text-gray-400 text-sm md:text-lg mb-3 md:mb-6">Profilning pastki qismida qo'shimcha sozlamalar.</p>
@@ -743,7 +766,7 @@
 
         <!-- ==================== SLIDE 24: Xulosa ==================== -->
         <div class="slide" id="slide-23">
-            <div class="max-w-5xl mx-auto w-full text-center">
+            <div class="slide-content max-w-5xl mx-auto w-full text-center">
                 <i class="fas fa-check-circle text-4xl md:text-8xl brand-green mb-3 md:mb-6"></i>
                 <h2 class="text-2xl md:text-6xl font-extrabold mb-3 md:mb-6">Xulosa</h2>
                 <p class="text-sm md:text-xl text-gray-300 mb-5 md:mb-10 max-w-3xl mx-auto">Dizaynidan tortib to'lov tizimigacha to'liq tayyor bo'lgan, professional darajadagi loyiha.</p>
